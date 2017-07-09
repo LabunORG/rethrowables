@@ -1,6 +1,8 @@
 package org.labun.rethrowables;
 
 /**
+ * Similar to simple Runnable, but wraps checked exceptions and rethrow it as unchecked.
+ *
  * @author kulabun
  */
 @FunctionalInterface

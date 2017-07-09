@@ -3,6 +3,8 @@ package org.labun.rethrowables;
 import java.util.function.Consumer;
 
 /**
+ * Similar to Consumer, but wraps checked exceptions and rethrow it as unchecked.
+ *
  * @author kulabun
  */
 @FunctionalInterface

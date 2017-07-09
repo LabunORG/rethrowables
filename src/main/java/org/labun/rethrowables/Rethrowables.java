@@ -1,6 +1,8 @@
 package org.labun.rethrowables;
 
 /**
+ * Utility class aggregates functions to wrap methods with throws clause.
+ *
  * @author kulabun
  */
 public class Rethrowables {
