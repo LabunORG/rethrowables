@@ -1,5 +1,7 @@
 package org.labun.rethrowables;
 
+import lombok.SneakyThrows;
+
 /**
  * Similar to simple Runnable, but wraps checked exceptions and rethrow it as unchecked.
  *
@@ -7,14 +9,10 @@ package org.labun.rethrowables;
  */
 @FunctionalInterface
 public interface RethrowableRunnable extends Runnable {
+
+    @SneakyThrows
     default void run() {
-        try {
-            doRun();
-        } catch (RuntimeException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        doRun();
     }
 
     void doRun() throws Exception;
